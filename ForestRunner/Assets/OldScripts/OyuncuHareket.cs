@@ -6,6 +6,8 @@ public class OyuncuHareket : MonoBehaviour
 {
     public float hiz = 5;  // inspector erisimi "public" -> yatayCarpan,hiz
     public Rigidbody rb;
+    
+   
  
 
     float yatayInput;
