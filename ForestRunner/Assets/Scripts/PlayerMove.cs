@@ -23,7 +23,7 @@ public class PlayerMove : MonoBehaviour
         
         if ((Input.GetKey(KeyCode.A)) || Input.GetKey(KeyCode.LeftArrow))
         {
-            if (this.gameObject.transform.position.x > levelSinir.solTrf)
+            if (this.gameObject.transform.position.x > LevelSinir.solTrf)
             {
                 transform.Translate(Vector3.left * Time.deltaTime * solsagHiz);
             }
@@ -33,7 +33,7 @@ public class PlayerMove : MonoBehaviour
         if ((Input.GetKey(KeyCode.D)) || Input.GetKey(KeyCode.RightArrow))
         {
 
-            if (this.gameObject.transform.position.x < levelSinir.sagTrf)
+            if (this.gameObject.transform.position.x < LevelSinir.sagTrf)
             {
                 transform.Translate(Vector3.left * Time.deltaTime * solsagHiz * -1);
             }

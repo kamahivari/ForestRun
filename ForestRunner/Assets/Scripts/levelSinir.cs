@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class levelSinir : MonoBehaviour
+public class LevelSinir : MonoBehaviour
 {
     public static float solTrf = -3.5f;
     public static float sagTrf = 3.5f;
