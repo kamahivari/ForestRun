@@ -19,11 +19,11 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.forward * Time.deltaTime * ileriHiz,Space.World);
+        transform.Translate(Vector3.forward * Time.deltaTime * ileriHiz,Space.World);     //Zamana bagli vector3 üzerinden hareket ; Space.World=0 Default koordinat düzleminde hareket.
         
         if ((Input.GetKey(KeyCode.A)) || Input.GetKey(KeyCode.LeftArrow))
         {
-            if (this.gameObject.transform.position.x > LevelSinir.solTrf)
+            if (this.gameObject.transform.position.x > LevelSinir.solTrf)       //levelsinirlari içerisinde kalmak þartýyla
             {
                 transform.Translate(Vector3.left * Time.deltaTime * solsagHiz);
             }
@@ -35,7 +35,7 @@ public class PlayerMove : MonoBehaviour
 
             if (this.gameObject.transform.position.x < LevelSinir.sagTrf)
             {
-                transform.Translate(Vector3.left * Time.deltaTime * solsagHiz * -1);
+                transform.Translate(Vector3.left * Time.deltaTime * solsagHiz * -1);  //Tek deðiþken üzerinde sola-saga ivmelenmenin axiste ters yöne iþaret etmesi için -1
             }
         }
 
