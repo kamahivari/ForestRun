@@ -44,8 +44,9 @@ public class PlayerMove : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other)                    //SpawnManager-ZeminSpawner;3.adým -> Player Collider'a girince tetiklenerek sýradaki zemini oluþturuyor.
-    {
+    {  
         spawnManager.SpawnTriggerGiris();  // Collidera giriþte tetiklenecek func. 
+
     }
 
 }
