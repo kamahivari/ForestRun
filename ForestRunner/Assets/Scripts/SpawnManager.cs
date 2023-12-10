@@ -26,6 +26,7 @@ public class SpawnManager : MonoBehaviour
     public void SpawnTriggerGiris()
     {
         zeminSpawner.MoveZemin();
-        cevreSpawner.SpawnPcevre();
+        cevreSpawner.SpawnPcevreSol();
+        cevreSpawner.SpawnPcevreSag();
     }
 }
