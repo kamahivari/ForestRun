@@ -210,6 +210,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pcevre_2
       objectReference: {fileID: 0}
+    - target: {fileID: 7072127431038983443, guid: 2c53bd79372d39547b1da45d9368789e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
