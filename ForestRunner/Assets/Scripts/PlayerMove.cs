@@ -60,8 +60,9 @@ public class PlayerMove : MonoBehaviour
             {
                 if (zipliyorMu == false)
                 {
-                    zipliyorMu = true;
-                    playerObject.GetComponent<Animator>().Play("Jumping"); //Animator penceresine referans vererek "Jumping" animasyonunu çaðýr
+                playerObject.GetComponent<Animator>().SetTrigger("jump"); //Animator penceresine referans vererek "jump" triggerini animatore yollar
+                zipliyorMu = true;
+                    
 
                
                     StartCoroutine(ZiplamaSirasi()); // Coroutine çaliþtirarak belli bir süreyle tekrar tekrar çalýþabilecek bir yapi saglanir
@@ -106,7 +107,7 @@ public class PlayerMove : MonoBehaviour
         yield return new WaitForSeconds(ziplamaAraligi);         //belli bir süre beklemesini saðlayabiliriz zýplamasý için
         zipliyorMu = false;
         dusuyorMu = false;
-        playerObject.GetComponent<Animator>().Play("Standard Run");  //Surekli kosmasý gerektiði için Looptaki koþma animasyonu tekrar çaðrýlmalý
+        
         transform.position = new Vector3(transform.position.x, ilkYukseklik, transform.position.z);
     }
 
