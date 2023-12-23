@@ -981,6 +981,7 @@ GameObject:
   - component: {fileID: 1225034102}
   - component: {fileID: 1225034101}
   - component: {fileID: 1225034100}
+  - component: {fileID: 1225034103}
   m_Layer: 0
   m_Name: SpawnManager
   m_TagString: Untagged
@@ -1036,6 +1037,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1225034103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225034099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2345de53b4fc34a9663ebbc8e2e292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  engelPreb:
+  - {fileID: 4192431390947819612, guid: 917759d0b25d6204fbeb317058ba3717, type: 3}
+  - {fileID: 4192431390947819612, guid: 936a58d72851e164297ff86c2bfd8793, type: 3}
+  zSpawn: 15
+  engelAralik: 12
+  engelSayi: 5
+  playerTransform: {fileID: 444997390}
 --- !u!1001 &1239120144
 PrefabInstance:
   m_ObjectHideFlags: 0
