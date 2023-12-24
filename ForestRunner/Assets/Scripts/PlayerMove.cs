@@ -110,10 +110,14 @@ public class PlayerMove : MonoBehaviour
         transform.position = new Vector3(transform.position.x, ilkYukseklik, transform.position.z);
     }
 
+
+
+ 
     private void OnTriggerEnter(Collider other)                    //SpawnManager-ZeminSpawner;3.adým -> Player Collider'a girince tetiklenerek sýradaki zemini oluþturuyor.
     {  
         spawnManager.SpawnTriggerGiris();  // Collidera giriþte tetiklenecek func. 
 
     }
+    
 
 }

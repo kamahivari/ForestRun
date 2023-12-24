@@ -22,7 +22,8 @@ public class EngelSpawner : MonoBehaviour
             if (i == 0)
                 SpawnEngel(0);
             else
-                SpawnEngel(Random.Range(0, engelPreb.Length));
+              SpawnEngel(Random.Range(0, engelPreb.Length));
+             
         }   
     }
 
@@ -43,7 +44,8 @@ public class EngelSpawner : MonoBehaviour
         GameObject aktif = Instantiate(engelPreb[engelIndex], transform.forward * zSpawn, transform.rotation);
         aktifEngel.Add(aktif);
         zSpawn += engelAralik;
-
+        
+     
     }
     
     private void DeleteEngel()
@@ -51,4 +53,7 @@ public class EngelSpawner : MonoBehaviour
         Destroy(aktifEngel[0],2f); //gecikme
         aktifEngel.RemoveAt(0);
     }
+
+
+
 }

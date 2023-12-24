@@ -8,7 +8,9 @@ public class GameManager : MonoBehaviour
 {
     private GameObject player;
 
-    public Text uiMesafe; 
+
+    public Text uiMesafe;
+
 
 
     // Start is called before the first frame update
@@ -21,6 +23,8 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         int mesafe = Mathf.RoundToInt(player.transform.position.z); //player'ýn z ekseni üzerindeki hareketini RoundtoInt ile en yakýn integera yuvarlayarak katedilen mesafe girilir.
-        uiMesafe.text = mesafe.ToString() + " m"; 
-        }
+        uiMesafe.text = mesafe.ToString() + " m";
+    }
+
+
 }
