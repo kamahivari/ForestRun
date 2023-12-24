@@ -1054,7 +1054,7 @@ MonoBehaviour:
   - {fileID: 4192431390947819612, guid: 936a58d72851e164297ff86c2bfd8793, type: 3}
   zSpawn: 15
   engelAralik: 12
-  engelSayi: 5
+  engelSayi: 10
   playerTransform: {fileID: 444997390}
 --- !u!1001 &1239120144
 PrefabInstance:

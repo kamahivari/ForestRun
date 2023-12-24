@@ -29,7 +29,7 @@ public class EngelSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerTransform.position.z - 35 > zSpawn - (engelSayi * engelAralik))
+        if (playerTransform.position.z > zSpawn - (engelSayi * engelAralik))   // -35>
         {
             SpawnEngel(Random.Range(0, engelPreb.Length));
             DeleteEngel();
@@ -48,7 +48,7 @@ public class EngelSpawner : MonoBehaviour
     
     private void DeleteEngel()
     {
-        Destroy(aktifEngel[0]);
+        Destroy(aktifEngel[0],2f); //gecikme
         aktifEngel.RemoveAt(0);
     }
 }
