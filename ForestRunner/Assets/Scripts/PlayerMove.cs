@@ -17,7 +17,8 @@ public class PlayerMove : MonoBehaviour
                    
     [SerializeField] float ziplamaKuvveti = 3f;
     [SerializeField] float ziplamaAraligi = 0.45f;
-    
+    [SerializeField] Animator animator;
+
 
     [SerializeField] Rigidbody rb;
 
@@ -61,10 +62,10 @@ public class PlayerMove : MonoBehaviour
                 if (zipliyorMu == false)
                 {
                     zipliyorMu = true;
-                    playerObject.GetComponent<Animator>().Play("Jumping"); //Animator penceresine referans vererek "Jumping" animasyonunu çaðýr
 
-               
-                    StartCoroutine(ZiplamaSirasi()); // Coroutine çaliþtirarak belli bir süreyle tekrar tekrar çalýþabilecek bir yapi saglanir
+                animator.SetTrigger("jump");//Jump Animasyonunu Tetikle
+
+                StartCoroutine(ZiplamaSirasi()); // Coroutine çaliþtirarak belli bir süreyle tekrar tekrar çalýþabilecek bir yapi saglanir
 
                 }
             }
@@ -79,7 +80,8 @@ public class PlayerMove : MonoBehaviour
             {
                 if(dusuyorMu==false)
                 {
-                    transform.Translate(Vector3.up * Time.deltaTime * ziplamaKuvveti, Space.World);
+               
+                transform.Translate(Vector3.up * Time.deltaTime * ziplamaKuvveti, Space.World);
                 }
 
                 if(dusuyorMu==true)
@@ -106,14 +108,18 @@ public class PlayerMove : MonoBehaviour
         yield return new WaitForSeconds(ziplamaAraligi);         //belli bir süre beklemesini saðlayabiliriz zýplamasý için
         zipliyorMu = false;
         dusuyorMu = false;
-        playerObject.GetComponent<Animator>().Play("Standard Run");  //Surekli kosmasý gerektiði için Looptaki koþma animasyonu tekrar çaðrýlmalý
+        
         transform.position = new Vector3(transform.position.x, ilkYukseklik, transform.position.z);
     }
 
+
+
+ 
     private void OnTriggerEnter(Collider other)                    //SpawnManager-ZeminSpawner;3.adým -> Player Collider'a girince tetiklenerek sýradaki zemini oluþturuyor.
     {  
         spawnManager.SpawnTriggerGiris();  // Collidera giriþte tetiklenecek func. 
 
     }
+    
 
 }

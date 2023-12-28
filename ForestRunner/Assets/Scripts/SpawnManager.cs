@@ -6,8 +6,7 @@ public class SpawnManager : MonoBehaviour
 {
 
     ZeminSpawner zeminSpawner;
-    
-
+   
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +18,8 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
+       
     }
 
 
@@ -27,5 +27,8 @@ public class SpawnManager : MonoBehaviour
     {
         zeminSpawner.MoveZemin();
        
+
     }
+
+    
 }
