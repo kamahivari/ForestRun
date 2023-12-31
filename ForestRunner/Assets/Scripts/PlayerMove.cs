@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerMove : MonoBehaviour
 {
 
-
+    public static bool isAlive=true; //Karekter hayattamý
     public float ileriHiz = 3;
     public float solsagHiz = 4;
 
@@ -18,6 +20,9 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] float ziplamaKuvveti = 3f;
     [SerializeField] float ziplamaAraligi = 0.45f;
     [SerializeField] Animator animator;
+    [SerializeField] GameObject deathPanel;
+    
+
 
 
     [SerializeField] Rigidbody rb;
@@ -33,6 +38,8 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isAlive)
+        { 
         transform.Translate(Vector3.forward * Time.deltaTime * ileriHiz,Space.World);     //Zamana bagli vector3 üzerinden hareket ; Space.World=0 Default koordinat düzleminde hareket.
 
         
@@ -69,8 +76,9 @@ public class PlayerMove : MonoBehaviour
 
                 }
             }
+        }
 
-      
+
 
 
 
@@ -120,6 +128,29 @@ public class PlayerMove : MonoBehaviour
         spawnManager.SpawnTriggerGiris();  // Collidera giriþte tetiklenecek func. 
 
     }
-    
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Engel")//Engele temas ederse
+        {
+            Death();//olmeyi cagýr
+        }
+    }
+    private void Death()
+    {
+        isAlive = false;
+        StartCoroutine(dieDelay());
+        animator.SetTrigger("crash");//olme animasyonu tetikle
+        deathPanel.SetActive(true);
+        
+
+
+    }
+    IEnumerator dieDelay()
+    {
+        yield return new WaitForSeconds(2f);
+        playerObject.SetActive(false);
+        //Animasyon bitince karekteri sil
+    }
+   
 
 }

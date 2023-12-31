@@ -6,6 +6,7 @@ TagManager:
   tags:
   - SpawnTrigger
   - Diamond
+  - Engel
   layers:
   - Default
   - TransparentFX
