@@ -13,3 +13,15 @@ Unity Version : Unity 2022.3.11f1
 4- Low Poly Gems
 
 5 - Quantum UI
+
+
+**Animation and Character**
+
++ Mixamo.com
+  - Character Name = AJ
+  - Standard Run + AJ = Collada(.dae)
+      + Animations (Aj@)
+         - Stumble Backwards.fbx
+         - Standard Run.fbx
+         - Jumping.fbx
+         - Happy Idle.fbx
