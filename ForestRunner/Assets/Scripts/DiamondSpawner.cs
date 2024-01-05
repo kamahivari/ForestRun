@@ -29,7 +29,7 @@ public class DiamondSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerTransform.position.z > zSpawn - (diamondSayi * diamondAralik))   // -35>
+        if (playerTransform.position.z > zSpawn - (diamondSayi * diamondAralik))   
         {
             SpawnEngel(Random.Range(0, diamondPreb.Length));
             DeleteEngel();

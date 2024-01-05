@@ -13,7 +13,11 @@ public class PlayerMove : MonoBehaviour
 
     public bool zipliyorMu = false;  //default  -->> Zýplama 2 aþamalý ; yükselme ve düsme
     public bool dusuyorMu = false;
+
+ 
     public GameObject playerObject;
+
+    public GameManager gameManager;
 
     //------------------------------------------------------------------------------------------------->Ýnscpector pencerisinden müdahale edilebilecek satýrlar
                    
@@ -125,7 +129,17 @@ public class PlayerMove : MonoBehaviour
  
     private void OnTriggerEnter(Collider other)                    //SpawnManager-ZeminSpawner;3.adým -> Player Collider'a girince tetiklenerek sýradaki zemini oluþturuyor.
     {  
+
+        if(other.tag == "SpawnTrigger")     //player - isTrigger Spawn yeni tile
+        { 
         spawnManager.SpawnTriggerGiris();  // Collidera giriþte tetiklenecek func. 
+        }
+
+        if(other.tag == "Diamond")       //player - isTrigger diamond 
+        {
+            gameManager.ToplananDiamond();      //playerdiamond++
+            Destroy(other.gameObject);
+        }
 
     }
     private void OnCollisionEnter(Collision collision)

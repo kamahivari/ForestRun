@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8516002002294912128}
   - component: {fileID: 5979726423829074961}
   - component: {fileID: 3289491653085974113}
+  - component: {fileID: 3919069862138019252}
   m_Layer: 0
   m_Name: Stone2
   m_TagString: Diamond
@@ -97,3 +98,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationHiz: 100
+--- !u!65 &3919069862138019252
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5642159097191675966}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.42806858, y: 0.37032443, z: 0.06593515}
+  m_Center: {x: 0.00030565262, y: -0.0000086426735, z: -0.00037602335}
