@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     public void ToplananDiamond()
     {
         playerDiamonds++;
-        uiDiamond.text = playerDiamonds.ToString();  
+        uiDiamond.text = playerDiamonds.ToString() + " x";  
         //Debug.Log("Coin : " + playerDiamonds);
 
     }
