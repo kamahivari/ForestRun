@@ -21,4 +21,11 @@ public class MenuController : MonoBehaviour
     {
         SceneManager.LoadScene("Level01");
     }
+
+    public void ExitGame()
+    {
+
+        Application.Quit();
+       // Debug.Log("Çýkýþ");
+    }
 }
