@@ -33,6 +33,8 @@ public class PlayerMove : MonoBehaviour
 
     public SpawnManager spawnManager;
 
+
+ 
     // Start is called before the first frame update
     void Start()
     {
@@ -42,10 +44,12 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (isAlive)
         { 
+        
         transform.Translate(Vector3.forward * Time.deltaTime * ileriHiz,Space.World);     //Zamana bagli vector3 üzerinden hareket ; Space.World=0 Default koordinat düzleminde hareket.
-
+  
         
     
             if ((Input.GetKey(KeyCode.A)) || Input.GetKey(KeyCode.LeftArrow))
@@ -156,7 +160,8 @@ public class PlayerMove : MonoBehaviour
         StartCoroutine(dieDelay());
         animator.SetTrigger("crash");//olme animasyonu tetikle
         deathPanel.SetActive(true);
-        
+        GameManager.mesafe = 0;
+        GameManager.playerDiamonds = 0;
 
 
     }
