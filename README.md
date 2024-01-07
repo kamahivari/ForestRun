@@ -25,3 +25,17 @@ Unity Version : Unity 2022.3.11f1
          - Standard Run.fbx
          - Jumping.fbx
          - Happy Idle.fbx
+
+
+
+
+
+
+
+[TEMP] Goal
+
+- Menu :: Settings Button > Script
+- Menu :: Player -> Happy IDLE animation
+- Max Score -> Main Menu
+- Increase forward speed
++ Section and Obstacle variant
