@@ -8,25 +8,28 @@ public class GameManager : MonoBehaviour
 {
     private GameObject player;
 
-    private int playerDiamonds = 0;
+    public static int playerDiamonds = 0;
 
     public Text uiMesafe;
     public Text uiDiamond;
     public Text scoreText;
     public Text BestScoreText;
+
     public static int mesafe;
     public static int score;
     public static int bestScore;
 
-
+    public static int bestElmascore;
+    public static int elmas;
+  
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
-        bestScore=PlayerPrefs.GetInt("bestScore",0);//PlayerPrefs yontemiyle bestscoreyi kayýttan al yoksa sýfýr al
-        
-        
+        bestScore = PlayerPrefs.GetInt("bestScore", 0);//PlayerPrefs yontemiyle bestscoreyi kayýttan al yoksa sýfýr al
+        bestElmascore = PlayerPrefs.GetInt("bestElmas", 0);
+
     }
 
     // Update is called once per frame
@@ -36,28 +39,34 @@ public class GameManager : MonoBehaviour
         uiMesafe.text = mesafe.ToString() + " m";
 
 
-      
+
     }
 
-    
+
     public void ToplananDiamond()
     {
         playerDiamonds++;
-        uiDiamond.text = playerDiamonds.ToString() + " x";  
+        uiDiamond.text = playerDiamonds.ToString() + " x";
         //Debug.Log("Coin : " + playerDiamonds);
 
     }
-    public void SaveScore(int score)
+    public void SaveScore(int score, int elmasScore)
     {
-        if(score > bestScore)//eger kullanýcý rekorunu gectiyse yeni skor bestscore olur
+        if (score > bestScore || elmasScore > bestElmascore)//eger kullanýcý rekorunu gectiyse yeni skor bestscore olur
         {
             bestScore = score;
             PlayerPrefs.SetInt("bestScore", bestScore);//playerprefse set etme islemi
-            
+
+            bestElmascore = elmasScore;
+            PlayerPrefs.SetInt("bestElmas", bestElmascore);
+
         }
-        BestScoreText.text = bestScore.ToString()+" m";
-        scoreText.text = mesafe.ToString()+" m"; //Menuye göster
+        BestScoreText.text = bestScore.ToString() + " m  " + bestElmascore.ToString() + " E";
+        scoreText.text = mesafe.ToString() + " m  " + playerDiamonds.ToString() + " E"; ; //Menuye göster
+
+
+        
     }
-   
+
 
 }

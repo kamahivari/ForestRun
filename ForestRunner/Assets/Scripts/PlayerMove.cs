@@ -152,7 +152,7 @@ public class PlayerMove : MonoBehaviour
     private void Death()
     {
         isAlive = false;
-        gameManager.SaveScore(GameManager.mesafe);
+        gameManager.SaveScore(GameManager.mesafe,GameManager.playerDiamonds);
         StartCoroutine(dieDelay());
         animator.SetTrigger("crash");//olme animasyonu tetikle
         deathPanel.SetActive(true);
