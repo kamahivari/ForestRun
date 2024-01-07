@@ -18,7 +18,7 @@ public class PlayerMove : MonoBehaviour
     public GameObject playerObject;
 
     public GameManager gameManager;
-
+   
     //------------------------------------------------------------------------------------------------->Ýnscpector pencerisinden müdahale edilebilecek satýrlar
                    
     [SerializeField] float ziplamaKuvveti = 3f;
@@ -152,6 +152,7 @@ public class PlayerMove : MonoBehaviour
     private void Death()
     {
         isAlive = false;
+        gameManager.SaveScore(GameManager.mesafe);
         StartCoroutine(dieDelay());
         animator.SetTrigger("crash");//olme animasyonu tetikle
         deathPanel.SetActive(true);

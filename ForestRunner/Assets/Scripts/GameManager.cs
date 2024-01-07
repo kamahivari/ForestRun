@@ -12,6 +12,11 @@ public class GameManager : MonoBehaviour
 
     public Text uiMesafe;
     public Text uiDiamond;
+    public Text scoreText;
+    public Text BestScoreText;
+    public static int mesafe;
+    public static int score;
+    public static int bestScore;
 
 
 
@@ -19,13 +24,17 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player");
+        bestScore=PlayerPrefs.GetInt("bestScore",0);
+        
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        int mesafe = Mathf.RoundToInt(player.transform.position.z); //player'ýn z ekseni üzerindeki hareketini RoundtoInt ile en yakýn integera yuvarlayarak katedilen mesafe girilir.
+        mesafe = Mathf.RoundToInt(player.transform.position.z); //player'ýn z ekseni üzerindeki hareketini RoundtoInt ile en yakýn integera yuvarlayarak katedilen mesafe girilir.
         uiMesafe.text = mesafe.ToString() + " m";
+
 
       
     }
@@ -37,6 +46,17 @@ public class GameManager : MonoBehaviour
         uiDiamond.text = playerDiamonds.ToString() + " x";  
         //Debug.Log("Coin : " + playerDiamonds);
 
+    }
+    public void SaveScore(int score)
+    {
+        if(score > bestScore)
+        {
+            bestScore = score;
+            PlayerPrefs.SetInt("bestScore", bestScore);
+            
+        }
+        BestScoreText.text = bestScore.ToString()+" m";
+        scoreText.text = mesafe.ToString()+" m";
     }
    
 
