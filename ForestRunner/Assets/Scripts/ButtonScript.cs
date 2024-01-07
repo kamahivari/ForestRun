@@ -12,4 +12,8 @@ public class ButtonScript : MonoBehaviour
         PlayerMove.isAlive = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);//Sahneyi yeniden baslat
     }
+    public void HomeButton()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
 }

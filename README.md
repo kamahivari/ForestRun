@@ -14,23 +14,19 @@ Unity Version : Unity 2022.3.11f1
 
 5 - Quantum UI
 
-
 **Animation and Character**
 
-+ Mixamo.com
+- Mixamo.com
   - Character Name = AJ
   - Standard Run + AJ = Collada(.dae)
-      + Animations (Aj@)
-         - Stumble Backwards.fbx
-         - Standard Run.fbx
-         - Jumping.fbx
-         - Happy Idle.fbx
+    - Animations (Aj@)
+      - Stumble Backwards.fbx
+      - Standard Run.fbx
+      - Jumping.fbx
+      - Happy Idle.fbx
 
-
-
-
-
-
+** UI Elements **
+<a href="https://www.flaticon.com/free-icons/home" title="home icons">Home icons created by Dave Gandy - Flaticon</a>
 
 [TEMP] Goal
 
@@ -38,4 +34,5 @@ Unity Version : Unity 2022.3.11f1
 - Menu :: Player -> Happy IDLE animation
 - Max Score -> Main Menu
 - Increase forward speed
-+ Section and Obstacle variant
+
+* Section and Obstacle variant
