@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player");
-        bestScore=PlayerPrefs.GetInt("bestScore",0);
+        bestScore=PlayerPrefs.GetInt("bestScore",0);//PlayerPrefs yontemiyle bestscoreyi kayýttan al yoksa sýfýr al
         
         
     }
@@ -49,14 +49,14 @@ public class GameManager : MonoBehaviour
     }
     public void SaveScore(int score)
     {
-        if(score > bestScore)
+        if(score > bestScore)//eger kullanýcý rekorunu gectiyse yeni skor bestscore olur
         {
             bestScore = score;
-            PlayerPrefs.SetInt("bestScore", bestScore);
+            PlayerPrefs.SetInt("bestScore", bestScore);//playerprefse set etme islemi
             
         }
         BestScoreText.text = bestScore.ToString()+" m";
-        scoreText.text = mesafe.ToString()+" m";
+        scoreText.text = mesafe.ToString()+" m"; //Menuye göster
     }
    
 
