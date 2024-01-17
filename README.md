@@ -14,6 +14,7 @@ Unity Version : Unity 2022.3.11f1
 
 5 - Quantum UI
 
+6- FREE Stylized Bear - RPG Forest Animal
 **Animation and Character**
 
 - Mixamo.com
