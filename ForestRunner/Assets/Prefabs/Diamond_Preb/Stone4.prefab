@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5704249998859804141}
   - component: {fileID: -2910249299401688976}
   - component: {fileID: -8294803649310440817}
+  - component: {fileID: 6114963413549992192}
   m_Layer: 0
   m_Name: Stone4
   m_TagString: Diamond
@@ -119,3 +120,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.42504942, y: 0.46349773, z: 0.4908048}
   m_Center: {x: 0, y: -0.05384852, z: 0.0000033676624}
+--- !u!95 &6114963413549992192
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396100798930434312}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 304eb168c1a2bb94d982134c89d669cb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
