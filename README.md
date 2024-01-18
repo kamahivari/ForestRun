@@ -14,8 +14,8 @@ Unity Version : Unity 2022.3.11f1
 
 5 - Quantum UI
 
-6- FREE Stylized Bear - RPG Forest Animal
-**Animation and Character**
+6- FREE Stylized Bear - RPG Forest Animal **Animation and Character** (( for Main Menu ))
+
 
 - Mixamo.com
   - Character Name = AJ
@@ -32,7 +32,6 @@ Unity Version : Unity 2022.3.11f1
 [TEMP] Goal
 
 - Menu :: Settings Button > Script
-- Menu :: Player -> Happy IDLE animation
 - Increase forward speed
 
 * Section and Obstacle variant
