@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -39,7 +40,8 @@ public class PlayerMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        InvokeRepeating("hizArtis", 30f,30f); // Belirli bir zaman aralýðýnda uyandýrýlacak fonksiyon ; 30sn sonra ilk uyandýrma - 30sn araliklarla ;; 
+                                                // Level Scaling ve Zorluk aþamasý için modifiye edilebilir - geliþtirilebilir.
     }
 
     // Update is called once per frame
@@ -49,7 +51,7 @@ public class PlayerMove : MonoBehaviour
         if (isAlive)
         {
             transform.Translate(Vector3.forward * Time.deltaTime * ileriHiz,Space.World);     //Zamana bagli vector3 üzerinden hareket ; Space.World=0 Default koordinat düzleminde hareket.
-  
+         
         
     
             if ((Input.GetKey(KeyCode.A)) || Input.GetKey(KeyCode.LeftArrow))
@@ -170,6 +172,17 @@ public class PlayerMove : MonoBehaviour
         yield return new WaitForSeconds(2f);
         playerObject.SetActive(false);
         //Animasyon bitince karekteri sil
+    }
+
+     void hizArtis()
+    {
+        if (ileriHiz <= 15)               // Bölüm zorlugu üzerine geliþtirmelerle bu sýnýr da deðiþtirilebilir fakat oynanýþ açýsýndan pek saðlýklý olmayabilir.
+        {
+
+            ileriHiz += 0.1f;
+
+        }
+     
     }
    
 
