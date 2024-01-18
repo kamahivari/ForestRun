@@ -625,7 +625,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -105.7, y: -23.4}
+  m_AnchoredPosition: {x: -118.5, y: -23.399994}
   m_SizeDelta: {x: 34.61, y: 38.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &615353201
@@ -1510,6 +1510,9 @@ MonoBehaviour:
   engelPreb:
   - {fileID: 4192431390947819612, guid: 917759d0b25d6204fbeb317058ba3717, type: 3}
   - {fileID: 4192431390947819612, guid: 936a58d72851e164297ff86c2bfd8793, type: 3}
+  - {fileID: 4192431390947819612, guid: dd64b279dc491154f81273d9a3007596, type: 3}
+  - {fileID: 4192431390947819612, guid: 91a94bccbb8ec954581cace1774b79bd, type: 3}
+  - {fileID: 4192431390947819612, guid: 8285657d28e27e14a8676e7ca3e3a91e, type: 3}
   zSpawn: 15
   engelAralik: 12
   engelSayi: 10
@@ -2364,7 +2367,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -150, y: -49.9}
+  m_AnchoredPosition: {x: -161, y: -49.9}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2126565194
