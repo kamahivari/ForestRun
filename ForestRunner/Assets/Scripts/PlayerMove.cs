@@ -40,7 +40,7 @@ public class PlayerMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("hizArtis", 30f,30f); // Belirli bir zaman aralýðýnda uyandýrýlacak fonksiyon ; 30sn sonra ilk uyandýrma - 30sn araliklarla ;; 
+        InvokeRepeating("hizArtis",20f,20f); // Belirli bir zaman aralýðýnda uyandýrýlacak fonksiyon ; 30sn sonra ilk uyandýrma - 30sn araliklarla ;; 
                                                 // Level Scaling ve Zorluk aþamasý için modifiye edilebilir - geliþtirilebilir.
     }
 
