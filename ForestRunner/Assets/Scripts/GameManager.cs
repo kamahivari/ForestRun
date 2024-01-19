@@ -12,8 +12,10 @@ public class GameManager : MonoBehaviour
 
     public Text uiMesafe;
     public Text uiDiamond;
+    public Text uiHealth;
     public Text scoreText;
     public Text BestScoreText;
+    
 
     public static int mesafe;
     public static int score;
@@ -21,7 +23,11 @@ public class GameManager : MonoBehaviour
 
     public static int bestElmascore;
     public static int elmas;
-  
+
+   
+
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +35,14 @@ public class GameManager : MonoBehaviour
         player = GameObject.Find("Player");
         bestScore = PlayerPrefs.GetInt("bestScore", 0);//PlayerPrefs yontemiyle bestscoreyi kayýttan al yoksa sýfýr al
         bestElmascore = PlayerPrefs.GetInt("bestElmas", 0);
+        PlayerMove.healthCount = PlayerPrefs.GetInt("healthCount", 3); //Can sayisini al eger yoksa 3 can ile baslat
+        if (PlayerMove.healthCount < 3)
+        {
+            PlayerMove.healthCount = 3;
+        }
+        
+
+
 
     }
 
@@ -37,8 +51,6 @@ public class GameManager : MonoBehaviour
     {
         mesafe = Mathf.RoundToInt(player.transform.position.z); //player'ýn z ekseni üzerindeki hareketini RoundtoInt ile en yakýn integera yuvarlayarak katedilen mesafe girilir.
         uiMesafe.text = mesafe.ToString() + " m";
-
-
 
     }
 
@@ -67,6 +79,17 @@ public class GameManager : MonoBehaviour
 
         
     }
+    public void HealthDecrease()
+    {
+        PlayerMove.healthCount--; // Can'ý bir azalt
+
+        uiHealth.text = PlayerMove.healthCount.ToString() + " x"; ////NEDEN YAZIYA ULAÞAMIYORUM TEXT VALUESÝNÝ 1 BÝLE YAPAMIYORUM
+
+    }
+
+
+
+
 
 
 }
