@@ -7,13 +7,15 @@ using UnityEngine.UI;
 public class MenuController : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Text diamondText;
+     public Text diamondText;
     public Text scoreText;
+     int totalElmas;
+    int bestScore;
     void Start()
     {
-        int bestElmascore = PlayerPrefs.GetInt("bestElmas", 0);
-        int bestScore = PlayerPrefs.GetInt("bestScore", 0);
-        diamondText.text=bestElmascore.ToString() + "x";
+        totalElmas = PlayerPrefs.GetInt("totalElmas", 0);
+        bestScore = PlayerPrefs.GetInt("bestScore", 0);
+        diamondText.text=totalElmas.ToString() + "x";
         scoreText.text=bestScore.ToString() + "m";
     }
      
@@ -35,4 +37,6 @@ public class MenuController : MonoBehaviour
         Application.Quit();
        // Debug.Log("Çýkýþ");
     }
+   
+
 }

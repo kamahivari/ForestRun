@@ -198,6 +198,7 @@ GameObject:
   - component: {fileID: 94565990}
   - component: {fileID: 94565992}
   - component: {fileID: 94565993}
+  - component: {fileID: 94565994}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -220,6 +221,7 @@ RectTransform:
   - {fileID: 1997450635}
   - {fileID: 648191085}
   - {fileID: 1199843190}
+  - {fileID: 2085709309}
   m_Father: {fileID: 2101641383}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -305,6 +307,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   diamondText: {fileID: 2005047112}
   scoreText: {fileID: 1897103357}
+--- !u!114 &94565994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94565987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 353cb88ceacfb9648975748c5de37fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuController: {fileID: 0}
 --- !u!1001 &187891087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1616,7 +1631,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -0.000030517578, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 170}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1037401496
@@ -3666,20 +3681,20 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2085709308}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 709019603}
   - {fileID: 1037401495}
-  m_Father: {fileID: 2101641383}
+  m_Father: {fileID: 94565988}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 50, y: 0}
-  m_SizeDelta: {x: 302.6342, y: 170.2318}
-  m_Pivot: {x: 1, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 302.63416, y: 170.2318}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &2085709310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3723,7 +3738,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2085709311}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 94565994}
+        m_TargetAssemblyTypeName: ButtonScript, Assembly-CSharp
+        m_MethodName: BuyHealthButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2085709311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3869,7 +3896,6 @@ RectTransform:
   - {fileID: 2005047110}
   - {fileID: 1066898984}
   - {fileID: 1897103355}
-  - {fileID: 2085709309}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

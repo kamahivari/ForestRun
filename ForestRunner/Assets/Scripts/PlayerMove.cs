@@ -10,7 +10,7 @@ public class PlayerMove : MonoBehaviour
 {
 
     public static bool isAlive=true; //Karekter hayattamý
-    public static int healthCount; //Can Sayýsý
+   //Can Sayýsý
     public float ileriHiz = 3;
     public float solsagHiz = 4;
 
@@ -153,7 +153,7 @@ public class PlayerMove : MonoBehaviour
     {
         if (collision.gameObject.tag == "Engel")//Engele temas ederse
         {
-            if(healthCount<= 0)//can sifir degilse olmeyecek
+            if(GameManager.healthcount<= 0)//can sifir degilse olmeyecek
             {
                 Death();//olmeyi cagýr
             }
