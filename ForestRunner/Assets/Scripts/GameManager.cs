@@ -100,13 +100,15 @@ public class GameManager : MonoBehaviour
 
     }
     public static void BuyHealth() {
-
+        totalElmas=PlayerPrefs.GetInt("totalElmas", 0);
         if (totalElmas >= HealthPrice)
         {
 
             if (healthcount < 3)
             {
                 healthcount = 4; //Onlem amaclý
+                
+
             }
             else
             {

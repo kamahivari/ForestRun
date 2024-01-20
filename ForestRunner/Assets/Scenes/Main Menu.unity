@@ -320,6 +320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuController: {fileID: 0}
+  diamondText: {fileID: 2005047112}
 --- !u!1001 &187891087
 PrefabInstance:
   m_ObjectHideFlags: 0

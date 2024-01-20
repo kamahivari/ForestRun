@@ -173,6 +173,7 @@ public class PlayerMove : MonoBehaviour
         deathPanel.SetActive(true);
         GameManager.mesafe = 0;
         GameManager.playerDiamonds = 0;
+        PlayerPrefs.SetInt("healthCount",3);
 
 
     }
