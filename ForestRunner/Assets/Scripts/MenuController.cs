@@ -20,7 +20,7 @@ public class MenuController : MonoBehaviour
 
     private void Awake()
     {
-        audioManager_main = GameObject.FindGameObjectWithTag("Audio_Main").GetComponent<AudioManager_Main>();       //Player ortaya çýktýðýnda audiomanager componentleri çek
+        audioManager_main = GameObject.FindGameObjectWithTag("Audio_Main").GetComponent<AudioManager_Main>();       //audiomanager_main componentleri çek
     }
     void Start()
     {

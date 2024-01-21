@@ -11,6 +11,14 @@ public class ButtonScript : MonoBehaviour
     public MenuController menuController;
     public Text diamondText;
 
+    //---<> Main-Menu SFX 
+
+    AudioManager_Main audioManager_m;
+
+    private void Awake()
+    {
+        audioManager_m = GameObject.FindGameObjectWithTag("Audio_Main").GetComponent<AudioManager_Main>(); //audiomanager_main componentleri çek   
+    }
 
     public void RestartButton()
     {
@@ -26,7 +34,7 @@ public class ButtonScript : MonoBehaviour
     }
     public void BuyHealthButton()
     {
-       
+        audioManager_m.PlaySFX(audioManager_m.buyHealth);   // Can alýrken farklý SFX
         GameManager.BuyHealth();
         diamondText.text = PlayerPrefs.GetInt("totalElmas", 0).ToString() + "x";
 
