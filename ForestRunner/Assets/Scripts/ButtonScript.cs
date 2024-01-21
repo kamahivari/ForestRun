@@ -11,12 +11,14 @@ public class ButtonScript : MonoBehaviour
     public MenuController menuController;
     public Text diamondText;
 
+
     public void RestartButton()
     {
         PlayerMove.isAlive = true;
         GameManager.healthcount = 3;
         PlayerPrefs.SetInt("healthCount", 3);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);//Sahneyi yeniden baslat
+
     }
     public void HomeButton()
     {

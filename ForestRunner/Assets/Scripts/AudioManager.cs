@@ -16,7 +16,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip diamond;
 
 
-    PlayerMove playerMove;
+        
     
     private void Start()
     {

@@ -8,6 +8,7 @@ TagManager:
   - Diamond
   - Engel
   - Audio
+  - Audio_Main
   layers:
   - Default
   - TransparentFX

@@ -11,6 +11,17 @@ public class MenuController : MonoBehaviour
     public Text scoreText;
      int totalElmas;
     int bestScore;
+
+
+    //----->> Main Menu SFX ve Music
+
+    AudioManager_Main audioManager_main;
+
+
+    private void Awake()
+    {
+        audioManager_main = GameObject.FindGameObjectWithTag("Audio_Main").GetComponent<AudioManager_Main>();       //Player ortaya çýktýðýnda audiomanager componentleri çek
+    }
     void Start()
     {
         totalElmas = PlayerPrefs.GetInt("totalElmas", 0);
@@ -29,11 +40,13 @@ public class MenuController : MonoBehaviour
     {
         PlayerMove.isAlive = true;
         SceneManager.LoadScene("Level01");
+
+        audioManager_main.PlaySFX(audioManager_main.buttonClick); //buttonclick sound
     }
 
     public void ExitGame()
     {
-
+        audioManager_main.PlaySFX(audioManager_main.buttonClick); //buttonclick sound
         Application.Quit();
        // Debug.Log("Çýkýþ");
     }
