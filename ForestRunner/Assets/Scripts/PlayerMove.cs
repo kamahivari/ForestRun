@@ -36,14 +36,18 @@ public class PlayerMove : MonoBehaviour
 
     public SpawnManager spawnManager;
 
+
+    //------------------------------>> Efekt
+
     public ParticleSystem diamondToplamaParticle;  //Preb yapýlan efekti toplanan diamond ile aktiflestirme
+    public ParticleSystem zeminParticle;
 
 
  
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("hizArtis",20f,20f); // Belirli bir zaman aralýðýnda uyandýrýlacak fonksiyon ; 30sn sonra ilk uyandýrma - 30sn araliklarla ;; 
+        InvokeRepeating("hizArtis",20f,20f); // Belirli bir zaman aralýðýnda uyandýrýlacak fonksiyon ; 20sn sonra ilk uyandýrma - 20sn araliklarla ;; 
                                                 // Level Scaling ve Zorluk aþamasý için modifiye edilebilir - geliþtirilebilir.
     }
 
@@ -54,7 +58,7 @@ public class PlayerMove : MonoBehaviour
         if (isAlive)
         {
             transform.Translate(Vector3.forward * Time.deltaTime * ileriHiz,Space.World);     //Zamana bagli vector3 üzerinden hareket ; Space.World=0 Default koordinat düzleminde hareket.
-         
+            zeminParticle.Play();
         
     
             if ((Input.GetKey(KeyCode.A)) || Input.GetKey(KeyCode.LeftArrow))
@@ -84,8 +88,9 @@ public class PlayerMove : MonoBehaviour
                     zipliyorMu = true;
 
                 animator.SetTrigger("jump");//Jump Animasyonunu Tetikle
+                    zeminParticle.Pause();
 
-                StartCoroutine(ZiplamaSirasi()); // Coroutine çaliþtirarak belli bir süreyle tekrar tekrar çalýþabilecek bir yapi saglanir
+                    StartCoroutine(ZiplamaSirasi()); // Coroutine çaliþtirarak belli bir süreyle tekrar tekrar çalýþabilecek bir yapi saglanir
 
                 }
             }
