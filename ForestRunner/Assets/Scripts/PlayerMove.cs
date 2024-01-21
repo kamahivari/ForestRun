@@ -36,6 +36,8 @@ public class PlayerMove : MonoBehaviour
 
     public SpawnManager spawnManager;
 
+    public ParticleSystem diamondToplamaParticle;  //Preb yapýlan efekti toplanan diamond ile aktiflestirme
+
 
  
     // Start is called before the first frame update
@@ -145,7 +147,9 @@ public class PlayerMove : MonoBehaviour
         if(other.tag == "Diamond")       //player - isTrigger diamond 
         {
             gameManager.ToplananDiamond();      //playerdiamond++
+            Instantiate(diamondToplamaParticle, other.transform.position + new Vector3(0, 0.497f, 0), other.transform.rotation);  //Clone efekt yaratiliyor -- Ýnspector > StopAction - Destroy ile yok ediliyor.
             Destroy(other.gameObject);
+            
         }
 
     }

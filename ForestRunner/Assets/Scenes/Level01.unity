@@ -613,6 +613,7 @@ MonoBehaviour:
   deathPanel: {fileID: 1505312829}
   rb: {fileID: 444997393}
   spawnManager: {fileID: 1225034100}
+  diamondToplamaParticle: {fileID: 5565468622599413465, guid: dd3bfed9a18ed2342ae9d6c6a552cb14, type: 3}
 --- !u!54 &444997393
 Rigidbody:
   m_ObjectHideFlags: 0
