@@ -162,6 +162,8 @@ public class PlayerMove : MonoBehaviour
             gameManager.ToplananDiamond();      //playerdiamond++
             Instantiate(diamondToplamaParticle, other.transform.position + new Vector3(0, 0.497f, 0), other.transform.rotation);  //Clone efekt yaratiliyor -- Ýnspector > StopAction - Destroy ile yok ediliyor.
             Destroy(other.gameObject);
+
+            audioManager.PlaySFX(audioManager.diamond);  //diamond sound parametre olarak geçirildi , PlaySFX() oneshot çalýþtýr.
             
         }
 

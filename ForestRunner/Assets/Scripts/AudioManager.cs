@@ -7,12 +7,13 @@ public class AudioManager : MonoBehaviour
     [Header("------------------- Audio Source -----------------")]
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource SFXSource;
+    [SerializeField] AudioSource DeathSFXSource;
 
     [Header("------------------- Audio Clip -------------------")]
 
     public AudioClip background;
     public AudioClip deathpanel;
-    // public AudioClip diamond;
+    public AudioClip diamond;
 
 
     PlayerMove playerMove;
@@ -32,7 +33,7 @@ public class AudioManager : MonoBehaviour
 
     public void DeathPlaySFX(AudioClip clip)       // Sadece Deathpanele özel fonksiyon background music disable etmesi için
     {
-        SFXSource.PlayOneShot(clip);  // tek seferde çalýþtýrýlacak efekt
+        DeathSFXSource.PlayOneShot(clip);  // tek seferde çalýþtýrýlacak efekt
         musicSource.Stop();
     }
 }
