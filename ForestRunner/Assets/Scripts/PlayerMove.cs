@@ -42,8 +42,16 @@ public class PlayerMove : MonoBehaviour
     public ParticleSystem diamondToplamaParticle;  //Preb yapýlan efekti toplanan diamond ile aktiflestirme
     public ParticleSystem zeminParticle; //  karakterin zemin üzerinde koþarken çýkardýðý efekt
 
+    //------------------------------->> Audio
 
- 
+    AudioManager audioManager;
+
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();       //Player ortaya çýktýðýnda audiomanager componentleri çek
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -184,6 +192,8 @@ public class PlayerMove : MonoBehaviour
         GameManager.playerDiamonds = 0;
         PlayerPrefs.SetInt("healthCount",3);
 
+        audioManager.DeathPlaySFX(audioManager.deathpanel);  //Deathpanel , DeathPlaySFX fonksiyonuna parametre olarak geçir ve oneshot çal - background disable
+        
 
     }
     IEnumerator dieDelay()
