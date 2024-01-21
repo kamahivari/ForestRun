@@ -40,7 +40,7 @@ public class PlayerMove : MonoBehaviour
     //------------------------------>> Efekt
 
     public ParticleSystem diamondToplamaParticle;  //Preb yapýlan efekti toplanan diamond ile aktiflestirme
-    public ParticleSystem zeminParticle;
+    public ParticleSystem zeminParticle; //  karakterin zemin üzerinde koþarken çýkardýðý efekt
 
 
  
@@ -58,7 +58,7 @@ public class PlayerMove : MonoBehaviour
         if (isAlive)
         {
             transform.Translate(Vector3.forward * Time.deltaTime * ileriHiz,Space.World);     //Zamana bagli vector3 üzerinden hareket ; Space.World=0 Default koordinat düzleminde hareket.
-            zeminParticle.Play();
+            zeminParticle.Play();  //Zeminparticle her framede çaðrýlacak , karakterin hareketi aralýksýz olacaðý için zemin üzeri hareketindeki efekt.
         
     
             if ((Input.GetKey(KeyCode.A)) || Input.GetKey(KeyCode.LeftArrow))
@@ -88,7 +88,7 @@ public class PlayerMove : MonoBehaviour
                     zipliyorMu = true;
 
                 animator.SetTrigger("jump");//Jump Animasyonunu Tetikle
-                    zeminParticle.Pause();
+                zeminParticle.Pause(); // Ziplarken zeminparticle inaktif ediyoruz
 
                     StartCoroutine(ZiplamaSirasi()); // Coroutine çaliþtirarak belli bir süreyle tekrar tekrar çalýþabilecek bir yapi saglanir
 
