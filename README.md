@@ -32,7 +32,6 @@ Unity Version : Unity 2022.3.11f1
 [TEMP] Goal
 
 - Menu :: Settings Button > Script
-- Menu + InGame Music
-- Diamond Collactable Effects + SoundFX
+
   
 * Section and Obstacle variant (Current : 5 )
