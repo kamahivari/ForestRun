@@ -7099,6 +7099,7 @@ MonoBehaviour:
   background: {fileID: 8300000, guid: 5059413ec429c4507bb7bca2286fad19, type: 3}
   deathpanel: {fileID: 8300000, guid: a05dec704b2923c4aa47647e5347a32c, type: 3}
   diamond: {fileID: 8300000, guid: 8773868887102484fb629c2d87575142, type: 3}
+  deathpanelButton: {fileID: 8300000, guid: 300d863e30693bf41bef3a2c392fd2e0, type: 3}
 --- !u!4 &1506680468
 Transform:
   m_ObjectHideFlags: 0

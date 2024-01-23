@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b065d8f091d9a7c48a1fb131f4f8c687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationHiz: 100
+  rotationHiz: 200
 --- !u!65 &3264116295960147043
 BoxCollider:
   m_ObjectHideFlags: 0

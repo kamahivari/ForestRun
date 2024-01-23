@@ -14,10 +14,11 @@ public class ButtonScript : MonoBehaviour
     //---<> Main-Menu SFX 
 
     AudioManager_Main audioManager_m;
-
+   
     private void Awake()
     {
         audioManager_m = GameObject.FindGameObjectWithTag("Audio_Main").GetComponent<AudioManager_Main>(); //audiomanager_main componentleri çek   
+       
     }
 
     public void RestartButton()
@@ -27,10 +28,13 @@ public class ButtonScript : MonoBehaviour
         PlayerPrefs.SetInt("healthCount", 3);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);//Sahneyi yeniden baslat
 
+
+
     }
     public void HomeButton()
     {
         SceneManager.LoadScene("Main Menu");
+
     }
     public void BuyHealthButton()
     {
