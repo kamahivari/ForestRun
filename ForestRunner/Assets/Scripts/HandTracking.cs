@@ -127,7 +127,7 @@ public class HandTracking : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        
 
+       
     }
 }

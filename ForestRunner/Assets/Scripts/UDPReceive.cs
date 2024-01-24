@@ -48,5 +48,19 @@ public class UDPReceive : MonoBehaviour
             }
         }
     }
+    void StopThread()
+    {
+        
+        
+            receiveThread.Abort();
+        
+    }
+    private void FixedUpdate()
+    {
+        if (PlayerMove.isAlive == false)
+        {
+            StopThread();
+        }
+    }
 
 }
