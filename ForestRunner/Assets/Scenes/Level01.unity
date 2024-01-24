@@ -5562,7 +5562,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   udpReceive: {fileID: 1023761472}
-  handPoints: []
   rb: {fileID: 0}
 --- !u!1 &475912116
 GameObject:

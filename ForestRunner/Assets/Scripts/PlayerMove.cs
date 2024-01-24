@@ -16,6 +16,7 @@ public class PlayerMove : MonoBehaviour
 
     public bool zipliyorMu = false;  //default  -->> Zýplama 2 aþamalý ; yükselme ve düsme
     public bool dusuyorMu = false;
+    public static bool motionJump = false;
 
  
     public GameObject playerObject;
@@ -89,7 +90,7 @@ public class PlayerMove : MonoBehaviour
 
 
 
-            if ((Input.GetKey(KeyCode.W)) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.Space))
+            if ((Input.GetKey(KeyCode.W)) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.Space) ||motionJump==true)
             {
                 if (zipliyorMu == false)
                 {
@@ -97,7 +98,7 @@ public class PlayerMove : MonoBehaviour
 
                 animator.SetTrigger("jump");//Jump Animasyonunu Tetikle
                 zeminParticle.Pause(); // Ziplarken zeminparticle inaktif ediyoruz
-
+                    motionJump = false;
                     StartCoroutine(ZiplamaSirasi()); // Coroutine çaliþtirarak belli bir süreyle tekrar tekrar çalýþabilecek bir yapi saglanir
 
                 }
