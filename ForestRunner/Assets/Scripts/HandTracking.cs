@@ -20,55 +20,7 @@ public class HandTracking : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        try { 
-       string data = udpReceive.data;
-        
-;
-        data = data.Replace('(', ' ');
-        data = data.Replace(')', ' ');
-        string[] points = data.Split(',');
-        
-
-       
-            //TryParse ile degerleri kontrol ediyoruz
-            if (float.TryParse(points[0], NumberStyles.Float, CultureInfo.InvariantCulture, out x)) 
-            {
-                // Baþarýlý dönüþüm, x deðiþkenini kullanabilirsiniz.
-                x = x / 10;
-                if (float.TryParse(points[1], NumberStyles.Float, CultureInfo.InvariantCulture, out y)) { 
-                    y = y / 10;
-
-                }
-
-            }
-            if (x > 35) //sað sol
-            {
-            if (this.gameObject.transform.position.x > LevelSinir.solTrf) { 
-                transform.localPosition = (transform.position + new Vector3(-0.005f, 0, 0));
-            }
-        }
-            else if (x < 35)
-            {
-            if (this.gameObject.transform.position.x > LevelSinir.solTrf)
-            {
-                transform.localPosition = (transform.position + new Vector3(0.005f, 0, 0));
-            }
-        }
-
-        if (canJump &&  y < 8 && y > 0 )
-        {
-            StartCoroutine(JumpCorrutine());
-            
-        }
-        }
-        catch(Exception e) 
-        {
-            Debug.LogError(e);
-        }
-
-
-
-
+   
 
 
     }
@@ -89,6 +41,57 @@ public class HandTracking : MonoBehaviour
     private void FixedUpdate()
     {
 
-       
+        try
+        {
+            string data = udpReceive.data;
+
+            ;
+            data = data.Replace('(', ' ');
+            data = data.Replace(')', ' ');
+            string[] points = data.Split(',');
+
+
+
+            //TryParse ile degerleri kontrol ediyoruz
+            if (float.TryParse(points[0], NumberStyles.Float, CultureInfo.InvariantCulture, out x))
+            {
+                // Baþarýlý dönüþüm, x deðiþkenini kullanabilirsiniz.
+                x = x / 10;
+                if (float.TryParse(points[1], NumberStyles.Float, CultureInfo.InvariantCulture, out y))
+                {
+                    y = y / 10;
+
+                }
+
+            }
+            if (x > 35) //sað sol
+            {
+                if (this.gameObject.transform.position.x > LevelSinir.solTrf)
+                {
+                    transform.localPosition = (transform.position + new Vector3(-0.02f, 0, 0));
+                }
+            }
+            else if (x < 35)
+            {
+                if (this.gameObject.transform.position.x > LevelSinir.sagTrf)
+                {
+                    transform.localPosition = (transform.position + new Vector3(0.02f, 0, 0));
+                }
+            }
+
+            if (canJump && y < 8 && y > 0)
+            {
+                StartCoroutine(JumpCorrutine());
+
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.LogError(e);
+        }
+
+
+
+
     }
 }
