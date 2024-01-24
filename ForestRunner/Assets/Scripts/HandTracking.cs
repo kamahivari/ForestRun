@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
 
 public class HandTracking : MonoBehaviour
@@ -28,10 +29,18 @@ public class HandTracking : MonoBehaviour
         string[] points = data.Split(',');
         
 
-        x = float.Parse(points[0])/10;
-        y = float.Parse(points[1])/10;
-
        
+            //TryParse ile degerleri kontrol ediyoruz
+            if (float.TryParse(points[0], NumberStyles.Float, CultureInfo.InvariantCulture, out x)) 
+            {
+                // Baþarýlý dönüþüm, x deðiþkenini kullanabilirsiniz.
+                x = x / 10;
+                if (float.TryParse(points[1], NumberStyles.Float, CultureInfo.InvariantCulture, out y)) { 
+                    y = y / 10;
+
+                }
+
+            }
             if (x > 35) //sað sol
             {
             if (this.gameObject.transform.position.x > LevelSinir.solTrf) { 
