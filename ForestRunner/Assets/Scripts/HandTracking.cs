@@ -69,13 +69,15 @@ public class HandTracking : MonoBehaviour
                 if (this.gameObject.transform.position.x > LevelSinir.solTrf)
                 {
                     transform.localPosition = (transform.position + new Vector3(-0.02f, 0, 0));
+                    
                 }
             }
             else if (x < 35)
             {
-                if (this.gameObject.transform.position.x > LevelSinir.sagTrf)
+                if (this.gameObject.transform.position.x < LevelSinir.sagTrf)
                 {
                     transform.localPosition = (transform.position + new Vector3(0.02f, 0, 0));
+                    
                 }
             }
 
