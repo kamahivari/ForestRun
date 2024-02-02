@@ -2,7 +2,11 @@
 
 Unity Version : Unity 2022.3.11f1
 <br>
+Visual Studio 2022 Enterprise
+<br>
 Python : 3.11.1
+<br>
+PyCharm : 2023.3.2
 
 
 
