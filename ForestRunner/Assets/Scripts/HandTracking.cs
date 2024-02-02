@@ -72,7 +72,7 @@ public class HandTracking : MonoBehaviour
                     
                 }
             }
-            else if (x < 35)
+            else if ( x > 0  && x < 35)     //karakteri sürekli sað tarafa çekme bug fix
             {
                 if (this.gameObject.transform.position.x < LevelSinir.sagTrf)
                 {
