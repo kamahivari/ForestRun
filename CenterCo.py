@@ -67,3 +67,4 @@ while True:
     cv2.waitKey(1)
 
 
+    #Onur DOĞAN - "CENTER" property çözümü -- LandMarkList 21 noktanın aksine sadece X-Y ekseni tek parametre geliyor
